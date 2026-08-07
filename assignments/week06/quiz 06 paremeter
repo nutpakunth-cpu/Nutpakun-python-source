@@ -1,0 +1,19 @@
+"""
+รับ parameters: username (จำเป็น), age (ค่าเริ่มต้น 18), premium (ค่าเริ่มต้น False)
+return string ที่จัดรูปแบบข้อมูลผู้ใช้
+รูปแบบ: "[username] (age: [age]) - [Premium User / Standard User]"
+
+อย่าลืมเขียนโปรแรมในส่วนการทดลองใช้งานด้วย
+
+
+"""
+
+def create_user_profile(username, age=18, premium=False):
+    user_type = "Standard"
+    if premium == True:
+     user_type = "Premium"
+    return f"{username} (age: {age}) - {user_type}"
+
+print(create_user_profile("Nutpakun", 40))
+print(create_user_profile("Manee"))
+print(create_user_profile("Kalre", 23, True))
